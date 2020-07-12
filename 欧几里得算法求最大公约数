@@ -1,0 +1,21 @@
+#include<stdio.h>
+int gcd(int a,int b);
+int main()
+{
+	int a,b,temp;
+	scanf("%d %d",&a,&b);
+	temp = gcd(a,b);
+	
+	printf("%d",temp);
+	
+	return 0;
+ } 
+ int gcd(int a,int b){
+ 	int t;
+	for( ; ; ){
+		if(b==0) return a;
+		t = a%b;
+		a = b;
+		b = t;
+	}
+ }
