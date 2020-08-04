@@ -1,0 +1,19 @@
+double average(int* salary, int salarySize){
+  int i,max,min;
+  double sum=0,average1;
+  max = salary[0];
+  min = salary[0];
+  for(i=0;i<salarySize;i++){
+      if(salary[i]>max){
+          max = salary[i];
+      }
+      if(salary[i]<min){
+          min = salary[i];
+      }
+  }
+  for(i=0;i<salarySize;i++){
+      sum+=salary[i];
+  }
+      average1 = (sum-min-max)*1.0/(salarySize-2);
+      return average1;
+}
