@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main()
+{
+	int n,i,j;
+	int b[1000],cnt=0;
+	scanf("%d",&n);
+	for(i=1;i<=n;i++){
+		printf(" %d",i);
+	}
+	for(i=1;i<=n;i++){
+		if(i==1) continue;
+		for(j=2;j<=i;j++){
+			if(i%j==0){
+				break;
+			}
+		}
+		if(i==j){
+			b[cnt] = j;
+			cnt++;
+		}
+	}
+	printf("\n");
+	for(i=0;i<cnt;i++){
+		printf("%d ",b[i]);
+	}
+	
+	return 0;
+} 
