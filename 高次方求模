@@ -1,0 +1,25 @@
+#include<stdio.h>
+int fly(int a,int b,int c);
+int main()
+{
+	int a,b,c;
+	int result;
+	scanf("%d %d %d",&a,&b,&c);
+	
+	result = fly(a,b,c);
+	printf("%d\n",result);
+	
+	return 0;
+}
+int fly(int a,int b,int c)
+{
+	int p=1;
+	a=a%c;
+	while(b>0){
+		if(b%2==1)
+		p = (p*a)%c;
+		b = b/2;
+		a = (a*a)%c;
+	}
+	return p;
+}
