@@ -1,0 +1,12 @@
+int findRepeatNumber(int* nums, int numsSize)
+{
+   int count[100000]={0};
+   int i;
+   for(i=0;i<numsSize;i++){
+       count[nums[i]]++;
+       if(count[nums[i]]>1){
+           return nums[i];
+       }
+   }
+   return 0;
+}
