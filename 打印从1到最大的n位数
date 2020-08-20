@@ -1,0 +1,14 @@
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* printNumbers(int n, int* returnSize){
+    int sum;
+    sum = pow(10,n)-1;
+    int *arr = malloc(sizeof(int)*sum);
+    *returnSize = sum;
+    int i;
+    for(i=0;i<sum;i++){
+        arr[i] = i+1;
+    }
+    return arr;
+}
