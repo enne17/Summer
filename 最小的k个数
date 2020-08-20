@@ -1,0 +1,22 @@
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* getLeastNumbers(int* arr, int arrSize, int k, int* returnSize){
+        int *newarr =(int*)malloc(sizeof(int)*k);
+        *returnSize = k;
+        int m,i,j;
+	for(i=0;i<k;i++){
+		for(j=i+1;j<arrSize;j++){
+			if(arr[i]>arr[j])
+			{
+				m=arr[j];
+				arr[j]=arr[i];
+				arr[i]=m;
+            }
+        }
+    }
+    for(i=0;i<k;i++){
+        newarr[i] = arr[i];
+    }
+    return newarr;
+}
