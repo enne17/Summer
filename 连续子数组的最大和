@@ -1,0 +1,16 @@
+int maxSubArray(int* nums, int numsSize){
+    int i,max;
+    int arr;
+    max = nums[0];
+    arr = nums[0];
+    for(i=1;i<numsSize;i++){
+        if(nums[i]+arr<nums[i]){
+            arr = nums[i];
+        }else{
+        arr+=nums[i];
+        }
+        if(arr>max)
+        max = arr;
+    }
+    return max;
+}
