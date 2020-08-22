@@ -1,0 +1,8 @@
+int minArray(int* numbers, int numbersSize){
+    int i;
+    for(i=0;i<numbersSize-1;i++){
+        if(numbers[i]>numbers[i+1])
+         return numbers[i+1];
+    }
+    return numbers[0];
+}
