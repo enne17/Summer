@@ -1,0 +1,16 @@
+/**
+ * Note: The returned array must be malloced, assume caller calls free().
+ */
+int* shuffle(int* nums, int numsSize, int n, int* returnSize){
+    int *arr = (int*)malloc(sizeof(int)*numsSize);
+    *returnSize = numsSize;
+    int i,cnt=0;
+    for(i=0;i<numsSize;i++){
+        if(i%2==0){
+            arr[i] = nums[cnt++];
+        }else{
+            arr[i] = nums[n++];
+        }
+    }
+    return arr;
+}
