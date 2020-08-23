@@ -1,0 +1,5 @@
+void deleteNode(struct ListNode* node) {
+    struct ListNode *newnode = node->next;
+    *node = *newnode;
+    free(newnode);
+}
