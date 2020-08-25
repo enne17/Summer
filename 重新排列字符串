@@ -1,0 +1,9 @@
+char * restoreString(char * s, int* indices, int indicesSize){
+    char *arr = (char*)malloc(sizeof(char)*(indicesSize+1));
+    int i;
+    for(i=0;i<indicesSize;i++){
+        arr[indices[i]] = s[i]; 
+    }
+    arr[indicesSize] = '\0';
+    return arr;
+}
