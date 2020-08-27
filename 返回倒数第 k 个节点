@@ -1,0 +1,13 @@
+int kthToLast(struct ListNode* head, int k){
+    struct ListNode *quick = head;
+    struct ListNode *slow = head;
+    int i;
+    for(i=0;i<k;i++){
+        quick = quick->next;
+    }
+    while(quick){
+        quick = quick->next;
+        slow = slow->next;
+    }
+    return slow->val;
+}
