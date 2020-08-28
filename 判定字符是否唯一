@@ -1,0 +1,12 @@
+bool isUnique(char* astr){
+   int i,j;
+   if(astr[0]=='\0') return true;
+   for(i=0;i<strlen(astr)-1;i++){
+       for(j=i+1;j<strlen(astr);j++){
+           if(astr[j]==astr[i]){
+               return false;
+           }
+       }
+   }
+   return true;
+}
