@@ -1,0 +1,20 @@
+struct ListNode* removeDuplicateNodes(struct ListNode* head){
+    struct ListNode *arr = head;
+    struct ListNode *first,*second,*pre;
+    while(arr){
+        first = arr;
+        pre = arr;
+        second = pre->next;
+        while(second){
+            if(first->val==second->val){
+                pre->next = second->next;
+                second = second->next;
+            }else{
+                second = second->next;
+                pre = pre->next;
+            }
+        }
+        arr = arr->next;
+    }
+    return head;
+}
