@@ -1,0 +1,17 @@
+struct ListNode* middleNode(struct ListNode* head){
+    struct ListNode *node = head;
+    struct ListNode *time = NULL;
+    int cnt = 0,number;
+    while(node){
+        cnt++;
+        node = node->next;
+    }
+    node = head;
+    number = cnt/2;
+    while(number){
+        node = node->next;
+        number--;
+    }
+    time = node;
+    return time;
+}
